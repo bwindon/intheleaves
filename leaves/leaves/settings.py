@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'leaf',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'leaves.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +81,19 @@ WSGI_APPLICATION = 'leaves.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'api_test_db',
+        'USER': 'bwindon',
+        'PASSWORD': 'anzac1914',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
+
+"""
 
 DATABASES = {
     'default': dj_database_url.config(
@@ -88,7 +101,7 @@ DATABASES = {
         conn_max_age=600
     )
 }
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
