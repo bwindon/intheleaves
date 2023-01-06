@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Main charts{% endblock %}
+
+<html lang="en">
+
+<meta http-equiv='cache-control' content='no-cache'>
+<head>
+    Activities
+</head>
+{% block content %}
+  <body>
+        <div>
+        <canvas id="myChart" width="auto" height="auto"></canvas>
+        <body onload="updateChart()">
+        </div>
+
+    <div class="container">
+      <h1>
+
+      </h1>
+      <span id="value">--</span>
+      <div class="button-container">
+        <button class="btn decrease">-</button>
+        <button class="btn reset">Reset</button>
+        <button class="btn increase">+</button>
+        <button class="btn distance">Distance</button>
+        <button class="btn average_speed">Average speed</button>
+        <button class="btn max_speed">Max speed</button>
+        <button class="btn average_heartrate">Average heartrate</button>
+        <button class="btn max_heartrate">Max heartrate</button>
+        <button class="btn average_cadence">Average cadence</button>
+
+      </div>
+    </div>
+    <p></p>
+
+    <p></p>
+  <script type="text/javascript" src="/static/fetch.js"></script>
+  </body>
+{% endblock %}
+</html>
