@@ -53,7 +53,7 @@ btns.forEach(function (btn) {
 
 // Create data source
 async function fetchData(){
-    const url = 'http://localhost:8000/leaf/json/';
+    const url = 'https://intheleaves.onrender.com/leaf/json/';
     const response = await fetch(url, {headers: []});
     // wait until request has been completed
     const datapoints = await response.json();
